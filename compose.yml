@@ -1,0 +1,15 @@
+services:
+
+  dev:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./dev.conf:/etc/apache2/conf-enabled/info.conf
+
+  pro:
+    build: .
+    ports:
+      - "8081:80"
+    volumes:
+      - ./pro.conf:/etc/apache2/conf-enabled/info.conf
